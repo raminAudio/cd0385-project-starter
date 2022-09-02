@@ -13,6 +13,7 @@ Weighted ensembles with L2 regularization seemed to outperformed other models in
 ### What did the exploratory analysis find and how did you add additional features?
 Some features were very sparse, 0 or 1 and some very floats and some were categorical. I first normalized the features, those that needed to be categorical were casted and those that were floats were normalized to a range of 0-1. I used the same scalar on the test data. I dropped the feature year, as it did not add any useful information to he model prediction.
 I've also noticed that Holidays has a much higher count than weekdays, this features though probably relevant, can skew the model's prediction.
+
 ![add_feat_training_scores](img/training_histogram.png)
 
 
@@ -38,12 +39,19 @@ I'd then start with a basic model and try to adjust the hyperparameters on that 
 ### Create a line plot showing the top model score for the three (or more) training runs during the project.
 
 Model Scores on different hyperparameters
-![add_feat_training_scores](img/add_feat_training_scores.png)
+
 ![raw_training_scores](img/raw_training_scores.png)
+
+
+![add_feat_training_scores](img/add_feat_training_scores.png)
+
+
 ![hyper_training_scores](img/hyper_training_scores.png)
 
 Model Metric Performance
+
 ![performance_rmse](img/performance_rmse.png)
+
 ![performance_r2](img/performance_r2.png)
 
 ### Create a line plot showing the top kaggle score for the three (or more) prediction submissions during the project.
@@ -52,4 +60,5 @@ Model Metric Performance
 ![kaggle_scores](img/kaggle_scores.png)
 
 ## Summary
+
 As you can see the Kaggle scores has been improved from 1.38 to 0.49 through feature engineering and hyperparameters tuning.It's interesting to note that although the model with more varied hyperparameters and new features has a higher rmse than that with only added features, it still does better on kaggle score. I think that's a sign that the second model was slightly overfitting to the training dataset and the third model did a better job at generalizing. 
