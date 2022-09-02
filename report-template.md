@@ -11,10 +11,15 @@ Weighted ensembles with L2 regularization seemed to outperformed other models in
 
 ## Exploratory data analysis and feature creation
 ### What did the exploratory analysis find and how did you add additional features?
+
 Some features were very sparse, 0 or 1 and some very floats and some were categorical. I first normalized the features, those that needed to be categorical were casted and those that were floats were normalized to a range of 0-1. I used the same scalar on the test data. I dropped the feature year, as it did not add any useful information to he model prediction.
 I've also noticed that Holidays has a much higher count than weekdays, this features though probably relevant, can skew the model's prediction.
 
-![training_histogram](img/training_histogram.png)
+![training_raw_histogram](img/training_raw_histogram.png)
+
+![training_feat_add_histogram](img/training_feat_add_histogram.png)
+
+![training_hyper_histogram](img/training_hyper_histogram.png)
 
 
 ### How much better did your model preform after adding additional features and why do you think that is?
